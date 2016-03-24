@@ -12,8 +12,15 @@
 ----------------------------------------------------------------------
 *Authentication session mantığını anlamak için güzel bir video;
  https://www.youtube.com/watch?v=zQJtlvlNunw
+ ----------------------------------
+ new  ve build farkı
  
+ new: Belirli bir model için instance variable oluşturur.
+ @person = @Person.new
  
+ build: yine instance variable oluşturur fakat ilişkili modeller arasında
+ 1-) @profile = User.build_profile  #has_one
+ 2-) @books = User.messages.build #has_many  
 ----------------------------------------------------------------------
 -View-
 
