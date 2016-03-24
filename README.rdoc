@@ -102,7 +102,9 @@ ACTİVE RECORD QUERY
 
 <tt>Bidiğimiz Hersey kolay veya zor buraya yazılacaktır ve not alınıcaktır.</tt>.
 
+-----------------------------------------------------------------------------------------------------------------
+Kodlar:
 
-SORULAR 
-
-vim gemfile  kodu Gemfile dosyasının içeriğini tyerminale dökmeye yarar?
+-vim gemfile              kodu Gemfile dosyasının içeriğini terminale dökmeye yarar.
+-vim config/routes.rb          routes.rb 
+---------------------------------------------------------------------------
