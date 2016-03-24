@@ -9,13 +9,22 @@
 -Model-
 * ...
 -Controller-
-
+----------------------------------------------------------------------
+*Authentication session mantığını anlamak için güzel bir video;
+ https://www.youtube.com/watch?v=zQJtlvlNunw
+ 
+ 
+----------------------------------------------------------------------
 -View-
+
 About View Forms
 -----------------------------------------------------------------------
 * fields_for nesnesini fom_for nesnesinin içinde f.fields_for diye kullanıcaksan mvc mimarisini nested  olucak sekilde yapmalısın detaylı bilgi için;
 http://guides.rubyonrails.org/form_helpers.html
 (9.2 Nested form)-başlığı altımda
+
+* form_for nesnesinin içinde file_field kullanıyorsan ;
+<tt> <%= form_for @article, html: { multipart: true } do |f| %> </tt>
 -----------------------------------------------------------------------
 -Routes-
 * ...
@@ -24,7 +33,7 @@ Javascript hatalarını bulmak için LOGLARA BAKILIR
 terminalde sürekli açık olmalı!!!!
   
   1.Projenin olduğu dizine gel.
-  2.Bu kodu terminalde çalıştır. <tt>tail -f log/development.log</tt>
+  2.Bu kodu terminalde çalıştır. tail -f log/development.log
   
   NOT: Chrome ve Firefox 'ta hata veriyorsa tarayıcı ile ilgili değildir.
   respond_to ile render ederken js ile json aynı değil missing template hatası alırız
