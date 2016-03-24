@@ -30,4 +30,58 @@ terminalde sürekli açık olmalı!!!!
   respond_to ile render ederken js ile json aynı değil missing template hatası alırız
   Çözüm Olarak: render: nothing: true {status: 200(-->ok demek)}
 -----------------------------------------------------------------------
+
+ACTİVE RECORD QUERY
+
+1-find: aramayı sadece primary key'e gore yapar.
+ ÖRNEKLER:
+ Person.find(1) #id=1 olanı getirir
+ Person.find(1,2,6) #id=1,2,6 olanları getirir
+ Person.find([7,17]) #id= 7'den 17'ye kadar olan kayıtları getirir.
+ 
+ Not: update_attribute(s) kullanımı find ile yapılır. 
+ u =User.find(1)
+ u.update_attributes(password: '12345678',password_confirmation: '12345678')
+ 
+ 2-take: Herhangi bi sıralama gözetmeksizin belirtilen sayıda kayıt getirir.(random olarak)
+ ÖRNEKLER:
+ Person.take   #SELECT * FROM persons LIMIT 1
+ Person.take(5)   #SELECT * FROM persons LIMIT 5
+ 
+ take!: take ile aynı çalışır tek farkı,herhangi record return etmezse 
+ ERR: ActiveRecord::RecordNotFound if no matching record is found.
+ şeklinde hata verilmesini sağlar.
+ 
+ 3-first: primary key'e göre ilk kaydı geri döndürür
+ ÖRNEKLER:
+ Person.first  #SELECT * FROM persons ORDER BY persons.id ASC LIMIT 1  ->İLK KAYIT
+ Person.first(3)  #SELECT * FROM persons ORDER BY persons.id ASC LIMIT 3  -> İLK 3 KAYIT
+ 
+ first! --->>kayıt yoksa hata mesajı verir
+ 
+ 4-last: primary key'e göre son kaydı getirir
+ ÖRNEKLER:
+ Person.last  #SELECT * FROM clients ORDER BY clients.id DESC LIMIT 1
+ Person.last(5)  #SELECT * FROM clients ORDER BY clients.id DESC LIMIT 5
+ 
+ last! --->>kayıt yoksa hata mesajı verir
+ 
+ 5-find_by: herhangi bir attribute ile arama yapar ve ilk kaydı verir.
+ ÖRNEKLER:
+ 
+ Post.find_by name: 'Spartacus'
+ Post.find_by "published_at < ?", 2.weeks.ago
+ Post.find_by(:name, "Bob") = Post.find_by_name("Bob")
+ Address.find_by_street_name_and_city("Andheri", "Newyork")
+ 
+ find_by_<column_name> #tablodaki bütün attribute lar ile türetilebilir.
+ 
+ 
+ 6-where: birden fazla koşulla arama yapmak için kullanılır.  varsa birden fazla kayıt getirir .first .last demediğimiz sürece 
+ bundan dolayı update_attributes yaparken tek bir kaydı hedef göstermek için find metodu kullanılır
+ örnekler:
+ u = User.where(:email =>'feride@code2.co')
+ 
+ 
+
 <tt>Bidiğimiz Hersey kolay veya zor buraya yazılacaktır ve not alınıcaktır.</tt>.
