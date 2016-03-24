@@ -14,7 +14,13 @@
 * ...
 -Routes-
 * ...
-
-
-
+-----------------------------------------------------------------------
+Javascript hatalarını bulmak için LOGLARA BAKILIR
+terminalde sürekli açık olmalı!!!!
+  tail -f log/development.log
+  
+  NOT: Chrome ve Firefox 'ta hata veriyorsa tarayıcı ile ilgili değildir.
+  respond_to ile render ederken js ile json aynı değil missing template hatası alırız
+  Çözüm Olarak: render: nothing: true {status: 200(-->ok demek)}
+-----------------------------------------------------------------------
 <tt>Bidiğimiz Hersey kolay veya zor buraya yazılacaktır ve not alınıcaktır.</tt>.
