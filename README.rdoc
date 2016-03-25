@@ -10,6 +10,40 @@
 * ...
 -Controller-
 ----------------------------------------------------------------------
+*CONCERNS NEDİR VE NE İŞE YARAR ?
+Concerns controllerlarda veya modelde yapıcağımız bir işi bir baska modeldede yapmak istersek ve kontroller ve modeli sisman tutmak istemezsek kullanılır. 
+
+bir concerns oluşturduk.
+controler/concerns/commentable.rb
+module Commentable 
+
+   included do 
+        has_many :comments, as: :commentable 
+   end
+   
+   
+   def last_comment
+   ...........
+   end
+end
+
+simdi bu concernü modelden veya controllerdan kullanmak istiyoruz ve article ve event modelinde kullanalım
+
+ilk bu concern bir modele ayit olması lazım
+
+comment.rb
+belongs_to :commentable,polymorphic: true
+
+article.rb
+include Commentable
+
+event.rb 
+include Commentable 
+
+controllerdan bu metodu kullanmak istiyorsan controlera  include Commentable  edip modelname.last_comment diyip kullana bilirsin.
+
+
+
 *Authentication session mantığını anlamak için güzel bir video;
  https://www.youtube.com/watch?v=zQJtlvlNunw
  ----------------------------------
