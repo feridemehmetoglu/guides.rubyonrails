@@ -15,7 +15,8 @@
 Concerns controllerlarda veya modelde yapacağımız bir işi bir baska modeldede yapmak istersek ve kontroller ve modeli sisman tutmak istemezsek kullanılır. 
 
 bir concerns oluşturduk.
-controler/concerns/commentable.rb
+controller/concerns/commentable.rb
+
 module Commentable 
 
    included do 
