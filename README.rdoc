@@ -150,7 +150,8 @@ TEST
 Environments: development,production,test(3ünde de farklı db ler kullanılabilir, gerekli ayarlar:config/database.yml)
 
 testler,development ve productiondaki databaselere dokunmazlar!
-ls -F test ---> fixtures/
+ TERMİNALE :   ls -F test    yazarsak test folder ının içinde olan file ları görürüz.
+                fixtures/
                 controllers/
                 helpers/
                 mailers/
