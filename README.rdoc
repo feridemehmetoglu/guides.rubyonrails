@@ -11,7 +11,8 @@
 -Controller-
 ----------------------------------------------------------------------
 *CONCERNS NEDİR VE NE İŞE YARAR ?
-Concerns controllerlarda veya modelde yapıcağımız bir işi bir baska modeldede yapmak istersek ve kontroller ve modeli sisman tutmak istemezsek kullanılır. 
+
+Concerns controllerlarda veya modelde yapacağımız bir işi bir baska modeldede yapmak istersek ve kontroller ve modeli sisman tutmak istemezsek kullanılır. 
 
 bir concerns oluşturduk.
 controler/concerns/commentable.rb
@@ -29,7 +30,7 @@ end
 
 simdi bu concernü modelden veya controllerdan kullanmak istiyoruz ve article ve event modelinde kullanalım
 
-ilk bu concern bir modele ayit olması lazım
+ilk bu concern bir modele ait olması lazım
 
 comment.rb
 belongs_to :commentable,polymorphic: true
@@ -50,7 +51,7 @@ controllerdan bu metodu kullanmak istiyorsan controlera  include Commentable  ed
  new  ve build farkı
  
  new: Belirli bir model için instance variable oluşturur.
- @person = @Person.new
+ @person = Person.new
  
  build: yine instance variable oluşturur fakat ilişkili modeller arasında
  1-) @profile = User.build_profile  #has_one
@@ -142,3 +143,22 @@ Kodlar:
 -vim gemfile              kodu Gemfile dosyasının içeriğini terminale dökmeye yarar.
 -vim config/routes.rb          routes.rb 
 ---------------------------------------------------------------------------
+
+
+TEST
+
+Environments: development,production,test(3ünde de farklı db ler kullanılabilir, gerekli ayarlar:config/database.yml)
+
+testler,development ve productiondaki databaselere dokunmazlar!
+ls -F test ---> fixtures/
+                controllers/
+                helpers/
+                mailers/
+                integration
+                models/
+                test_helper.rb
+
+fixtures:test için kullanılan datalrın organizasyonunu sağlar ve dataları barındırır.
+         -testleri çalıştırmadan önce, önceden tanımlanmış veriler ile veritabanını doldurur.
+test_helper.rb: varsayılan test ayarlarını tutar.
+
