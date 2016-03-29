@@ -59,7 +59,19 @@ controllerdan bu metodu kullanmak istiyorsan controlera  include Commentable  ed
  2-) @books = User.messages.build #has_many  
 ----------------------------------------------------------------------
 -View-
-
+-----------------------------------------------------------------------
+## Creating a new article
+# long-style:
+form_for(@article, url: articles_path)
+# same thing, short-style (record identification gets used):
+form_for(@article)
+ 
+## Editing an existing article
+# long-style:
+form_for(@article, url: article_path(@article), html: {method: "patch"})
+# short-style:
+form_for(@article)
+-----------------------------------------------------------------------
 About View Forms
 -----------------------------------------------------------------------
 * fields_for nesnesini fom_for nesnesinin içinde f.fields_for diye kullanıcaksan mvc mimarisini nested  olucak sekilde yapmalısın detaylı bilgi için;
@@ -68,6 +80,8 @@ http://guides.rubyonrails.org/form_helpers.html
 
 * form_for nesnesinin içinde file_field kullanıyorsan ;
 <tt> <%= form_for @article, html: { multipart: true } do |f| %> </tt>
+-----------------------------------------------------------------------
+                           view end
 -----------------------------------------------------------------------
 -Routes-
 * ...
