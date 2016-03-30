@@ -178,3 +178,10 @@ fixtures:test için kullanılan datalrın organizasyonunu sağlar ve dataları b
          -testleri çalıştırmadan önce, önceden tanımlanmış veriler ile veritabanını doldurur.
 test_helper.rb: varsayılan test ayarlarını tutar.
 
+----------------------------------------
+--Server sonlandırma--
+tmp->pids->server.pid   içindeki no yu
+
+terminalde kill no  çaşıştır sonra rails s çalışır
+
+-------------------------------
