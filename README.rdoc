@@ -185,3 +185,11 @@ tmp->pids->server.pid   içindeki no yu
 terminalde kill no  çaşıştır sonra rails s çalışır
 
 -------------------------------
+
+----------------gem devise kurulumu------------
+1. gemfile ---> gem 'devise'
+2. bundle install
+3. rails generate devise:install
+4. rails generate devise User
+5.  db->migration->devise_create_user.rb ---> t.boolean :admin satırını ekle
+6. rake db:migrate
