@@ -8,8 +8,20 @@
 * ...
 -Model-
 * ...
--Controller-
-----------------------------------------------------------------------
+                              -------------------------------------------------------------------
+                                                      -COFFEESCRİPT-
+                              --------------------------------------------------------------------
+NOT:Coffescriptte indentation çok önemli. Coffe kodlarken indentation için ya tab kullan ya da whitespace kullan karışık kullanırsan hata veriyor.
+Not1:
+(->) işareti  'function() {});' yerine yazılır.
+
+https://css-tricks.com/jquery-coffeescript/
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+                                                      -CONTROLLER-
+                                ----------------------------------------------------------------------
 *CONCERNS NEDİR VE NE İŞE YARAR ?
 
 Concerns controllerlarda veya modelde yapacağımız bir işi bir baska modeldede yapmak istersek ve kontroller ve modeli sisman tutmak istemezsek kullanılır. 
@@ -57,9 +69,9 @@ controllerdan bu metodu kullanmak istiyorsan controlera  include Commentable  ed
  build: yine instance variable oluşturur fakat ilişkili modeller arasında
  1-) @profile = User.build_profile  #has_one
  2-) @books = User.messages.build #has_many  
-----------------------------------------------------------------------
--View-
------------------------------------------------------------------------
+                              ----------------------------------------------------------------------
+                                                         -VIEW-
+                              -----------------------------------------------------------------------
 ## Creating a new article
 # long-style:
 form_for(@article, url: articles_path)
@@ -81,11 +93,10 @@ http://guides.rubyonrails.org/form_helpers.html
 * form_for nesnesinin içinde file_field kullanıyorsan ;
 <tt> <%= form_for @article, html: { multipart: true } do |f| %> </tt>
 -----------------------------------------------------------------------
-                           view end
------------------------------------------------------------------------
--Routes-
-* ...
------------------------------------------------------------------------
+                           viewend
+                              -----------------------------------------------------------------------
+                                                      -ROUTES-
+                              -----------------------------------------------------------------------
 Javascript hatalarını bulmak için LOGLARA BAKILIR
 terminalde sürekli açık olmalı!!!!
   
@@ -95,9 +106,9 @@ terminalde sürekli açık olmalı!!!!
   NOT: Chrome ve Firefox 'ta hata veriyorsa tarayıcı ile ilgili değildir.
   respond_to ile render ederken js ile json aynı değil missing template hatası alırız
   Çözüm Olarak: render: nothing: true {status: 200(-->ok demek)}
------------------------------------------------------------------------
-
-ACTİVE RECORD QUERY
+                            -----------------------------------------------------------------------
+                                                  ACTİVE RECORD QUERY
+                            -----------------------------------------------------------------------
 
 1-find: aramayı sadece primary key'e gore yapar.
  ÖRNEKLER:
@@ -158,9 +169,9 @@ Kodlar:
 -vim gemfile              kodu Gemfile dosyasının içeriğini terminale dökmeye yarar.
 -vim config/routes.rb          routes.rb 
 ---------------------------------------------------------------------------
-
-
-TEST
+                     ---------------------------------------------------------------------------
+                                                         TEST
+                     ---------------------------------------------------------------------------
 
 Environments: development,production,test(3ünde de farklı db ler kullanılabilir, gerekli ayarlar:config/database.yml)
 
