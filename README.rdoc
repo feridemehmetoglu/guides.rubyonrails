@@ -2,8 +2,22 @@
 
 --Linux--
 * ...
---Github--
-* ...
+                               ------------------------------------------------------------------
+                                                      -GITHUB-
+                              ---------------------------------------------------------------
+git init: yeni depo
+git clone /yol/depo(yerel),git clone kullaniciadi@sunucu:/yol/depo(uzak sunucudakini kopya): bir depoyu kopyalamak
+ git add <dosyaadi>,git add *(hepsi):
+ git commit -m "Teslim mesajı"
+ git push origin master
+ 
+ 
+ http://rogerdudler.github.io/git-guide/index.tr.html
+ 
+ 
+                              -------------------------------------------------------------------
+                                                      -github end-
+                              ---------------------------------------------------------------
 --Ruby on Rails--
 * ...
 -Model-
