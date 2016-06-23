@@ -11,6 +11,10 @@ git clone /yol/depo(yerel),git clone kullaniciadi@sunucu:/yol/depo(uzak sunucuda
  git commit -m "Teslim mesajı"
  git push origin master
  
+ NOTTTT:  git push --force-with-lease: upstream repodan pull ettik ettikten sonra değişiklik yaptım,50 commit ana repodan geri kalmış bnm local github repom, git push origin master ile yerel repoma commit edince hata verdi.  bu komut satırı ile local github repoma projenn son halini attım :)
+ 
+
+ 
  
  http://rogerdudler.github.io/git-guide/index.tr.html
  
